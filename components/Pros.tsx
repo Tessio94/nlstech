@@ -1,9 +1,12 @@
-import React from "react";
+"use client";
+
 import Image from "next/image";
 import damage from "@/assets/ikone/damage.svg";
 import quick from "@/assets/ikone/quick.svg";
 import cheap from "@/assets/ikone/cheap.svg";
 import eco from "@/assets/ikone/eco.svg";
+import { motion } from "motion/react";
+import { cardContainer, cardVariants } from "@/lib/animation";
 
 const Pros = () => {
 	return (
@@ -11,8 +14,17 @@ const Pros = () => {
 			<h2 className="text-4xl font-mont font-bold mb-12">
 				Probajte i uvjerite se i sami
 			</h2>
-			<div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10">
-				<div className="flex flex-col gap-8 p-4 sm:p-8 xxl:p-10 bg-gray-400/30 rounded-4xl text-black hover:bg-gray-400/60 transition-all duration-500 shadow-lg hover:shadow-xl">
+			<motion.div
+				className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10"
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true, amount: 0.6 }}
+				variants={cardContainer}
+			>
+				<motion.div
+					className="flex flex-col gap-8 p-4 sm:p-8 xxl:p-10 bg-gray-400/30 rounded-4xl text-black hover:bg-gray-400/60 transition-colors  duration-500 shadow-lg hover:shadow-xl"
+					variants={cardVariants}
+				>
 					<Image src={damage} alt="" width={50} height={50} />
 					<div className="flex flex-col gap-1 items-start">
 						<h3 className="text-2xl font-bold font-mont">
@@ -23,8 +35,11 @@ const Pros = () => {
 							ni kod delikatnih površina.
 						</p>
 					</div>
-				</div>
-				<div className="flex flex-col gap-8 p-5 sm:p-8 xxl:p-10 bg-gray-400/30 rounded-4xl text-black hover:bg-gray-400/60 transition-all duration-500 shadow-lg hover:shadow-xl">
+				</motion.div>
+				<motion.div
+					className="flex flex-col gap-8 p-5 sm:p-8 xxl:p-10 bg-gray-400/30 rounded-4xl text-black hover:bg-gray-400/60 transition-colors duration-500 shadow-lg hover:shadow-xl"
+					variants={cardVariants}
+				>
 					<Image src={quick} alt="" width={50} height={50} />
 					<div className="flex flex-col gap-1 items-start">
 						<h3 className="text-2xl font-bold font-mont">Precizno i brzo</h3>
@@ -33,8 +48,11 @@ const Pros = () => {
 							brži rad od klasičnih metoda.
 						</p>
 					</div>
-				</div>
-				<div className="flex flex-col gap-8 p-5 sm:p-8 xxl:p-10 bg-gray-400/30 rounded-4xl text-black hover:bg-gray-400/60 transition-all duration-500 shadow-lg hover:shadow-xl">
+				</motion.div>
+				<motion.div
+					className="flex flex-col gap-8 p-5 sm:p-8 xxl:p-10 bg-gray-400/30 rounded-4xl text-black hover:bg-gray-400/60 transition-colors duration-500 shadow-lg hover:shadow-xl"
+					variants={cardVariants}
+				>
 					<Image src={cheap} alt="" width={50} height={50} />
 					<div className="flex flex-col gap-1 items-start">
 						<h3 className="text-2xl font-bold font-mont">Isplativo</h3>
@@ -43,8 +61,11 @@ const Pros = () => {
 							dodatnih kemikalija ili abraziva.
 						</p>
 					</div>
-				</div>
-				<div className="flex flex-col gap-8 p-5 sm:p-8 xxl:p-10 bg-gray-400/30 rounded-4xl text-black hover:bg-gray-400/60 transition-all duration-500 shadow-lg hover:shadow-xl">
+				</motion.div>
+				<motion.div
+					className="flex flex-col gap-8 p-5 sm:p-8 xxl:p-10 bg-gray-400/30 rounded-4xl text-black hover:bg-gray-400/60 transition-colors duration-500 shadow-lg hover:shadow-xl"
+					variants={cardVariants}
+				>
 					<Image src={eco} alt="" width={50} height={50} />
 					<div className="flex flex-col gap-1 items-start">
 						<h3 className="text-2xl font-bold font-mont">
@@ -55,8 +76,8 @@ const Pros = () => {
 							potrošnog materijala.
 						</p>
 					</div>
-				</div>
-			</div>
+				</motion.div>
+			</motion.div>
 		</section>
 	);
 };

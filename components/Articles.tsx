@@ -1,7 +1,12 @@
+"use client";
+
 import React from "react";
 import { GiCheckMark } from "react-icons/gi";
 import laser1 from "@/assets/laser1.jpg";
 import Image from "next/image";
+import { motion } from "motion/react";
+
+const MotionImage = motion.create(Image);
 
 const Articles = () => {
 	return (
@@ -9,34 +14,105 @@ const Articles = () => {
 			<div className="flex flex-col lg:flex-row lg:gap-0 gap-16 justify-between">
 				<div className="w-full lg:max-w-[48%] grow">
 					<div className="max-w-full flex flex-row">
-						<Image
+						<MotionImage
 							src={laser1}
 							alt="Lasersko čišćenje"
 							className="rounded-4xl xl:-mt-10 w-full sm:pr-3 lg:pr-0  sm:w-1/2 lg:w-full xl:w-1/2 h-auto xl:pr-3"
 							width={450}
 							height={680}
+							variants={{
+								hidden: {
+									scaleX: 0,
+									scaleY: 0,
+									opacity: 0,
+									transformOrigin: "top left",
+								},
+								visible: {
+									scaleX: 1,
+									scaleY: 1,
+									opacity: 1,
+									transition: { duration: 0.5 },
+								},
+							}}
+							// style={{ transformOrigin: "top left" }}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{
+								once: true,
+								amount: 0.9,
+								margin: "-30% 0% -30% 0%",
+							}}
 						/>
-						<Image
+						<MotionImage
 							src={laser1}
 							alt="Lasersko čišćenje"
 							className="rounded-4xl xl:-mb-10 w-1/2 h-auto xl:block lg:hidden sm:block hidden pl-3"
 							width={450}
 							height={680}
+							variants={{
+								hidden: {
+									scaleX: 0,
+									scaleY: 0,
+									opacity: 0,
+									transformOrigin: "top left",
+								},
+								visible: {
+									scaleX: 1,
+									scaleY: 1,
+									opacity: 1,
+									transition: { duration: 0.5, delay: 0.25 },
+								},
+							}}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true, amount: 0.9, margin: "-30% 0% -30% 0%" }}
 						/>
 					</div>
 				</div>
 				<div className="xl:mt-10 w-full lg:max-w-[48%]">
-					<h3 className="text-4xl font-mont font-bold mb-12">
+					<motion.h3
+						className="text-4xl font-mont font-bold mb-12"
+						variants={{
+							hidden: {
+								x: 100,
+								opacity: 0,
+							},
+							visible: {
+								x: 0,
+								opacity: 1,
+								transition: { duration: 0.5, delay: 0.75 },
+							},
+						}}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.5 }}
+					>
 						Fokus na tehnologiju i sigurnost
-					</h3>
-					<p className="text-2xl text-inter mb-12">
+					</motion.h3>
+					<motion.p
+						className="text-2xl text-inter mb-12"
+						variants={{
+							hidden: {
+								x: 100,
+								opacity: 0,
+							},
+							visible: {
+								x: 0,
+								opacity: 1,
+								transition: { duration: 0.5 },
+							},
+						}}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.6 }}
+					>
 						Lasersko čišćenje koristi visoko kontroliranu snagu svjetlosti kako
 						bi uklonilo slojeve nečistoća bez kontakta s površinom.
-					</p>
+					</motion.p>
 					<div className="">
-						<p className="mb-12 text-3xl font-semibold text-mont">
+						<motion.p className="mb-12 text-3xl font-semibold text-mont">
 							Što ga čini sigurnijim od ostalih vrsta čišćenja?
-						</p>
+						</motion.p>
 						<ul className="list-none flex flex-col gap-8">
 							<li className="flex flex-row gap-3 text-2xl text-inter">
 								<GiCheckMark />
@@ -96,19 +172,53 @@ const Articles = () => {
 				</div>
 				<div className="w-full lg:max-w-[48%] grow lg:order-2 order-1">
 					<div className="max-w-full flex flex-row">
-						<Image
+						<MotionImage
 							src={laser1}
 							alt="Lasersko čišćenje"
 							className="rounded-4xl xl:-mb-10 w-full sm:pr-3 lg:pr-0  sm:w-1/2 lg:w-full xl:w-1/2 h-auto xl:pr-3"
 							width={450}
 							height={680}
+							variants={{
+								hidden: {
+									scaleX: 0,
+									scaleY: 0,
+									opacity: 0,
+									transformOrigin: "top right",
+								},
+								visible: {
+									scaleX: 1,
+									scaleY: 1,
+									opacity: 1,
+									transition: { duration: 0.5, delay: 0.25 },
+								},
+							}}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true, amount: 0.9, margin: "-30% 0% -30% 0%" }}
 						/>
-						<Image
+						<MotionImage
 							src={laser1}
 							alt="Lasersko čišćenje"
 							className="rounded-4xl xl:-mt-10 w-1/2 h-auto xl:block lg:hidden sm:block hidden pl-3"
 							width={450}
 							height={680}
+							variants={{
+								hidden: {
+									scaleX: 0,
+									scaleY: 0,
+									opacity: 0,
+									transformOrigin: "top right",
+								},
+								visible: {
+									scaleX: 1,
+									scaleY: 1,
+									opacity: 1,
+									transition: { duration: 0.5 },
+								},
+							}}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true, amount: 0.9, margin: "-30% 0% -30% 0%" }}
 						/>
 					</div>
 				</div>

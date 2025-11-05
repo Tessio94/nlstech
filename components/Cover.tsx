@@ -21,37 +21,40 @@ const Cover = () => {
 					animate={{
 						y: 0,
 						opacity: 1,
-						transition: { duration: 0.3, delay: 0.5 },
+						transition: { duration: 0.5 },
 					}}
 				>
 					NLS Tech
 				</motion.h1>
 				<motion.p
 					className="font-inter text-2xl text-white xl:text-3xl"
-					initial={{ x: -100, opacity: 0 }}
+					initial={{ x: -200, opacity: 0 }}
 					animate={{
 						x: 0,
 						opacity: 1,
-						transition: { duration: 0.3, delay: 0.5 },
+						transition: { duration: 0.5 },
 					}}
 				>
 					Lasersko čišćenje tvrdih površina predstavlja modernu, neinvazivnu
 					metodu uklanjanja nečistoća, oksidacije, boje ili korozije pomoću
 					usmjerenog laserskog snopa.
 				</motion.p>
-				<motion.a
-					href="#tours"
-					className="bg-gray-400/40 group xsm:py-2 flex cursor-pointer items-center gap-3 rounded-2xl border-2 border-transparent px-5 py-1 text-2xl text-white transition-all duration-200 hover:border-white focus:border-white active:border-white lg:duration-500 xl:text-3xl font-mont"
-					initial={{ y: 50, opacity: 0 }}
+				<motion.div
+					initial={{ y: 100, opacity: 0 }}
 					animate={{
 						y: 0,
 						opacity: 1,
-						transition: { duration: 0.3, delay: 0.5 },
+						transition: { duration: 0.5 },
 					}}
 				>
-					Više informacija{" "}
-					<FaArrowDown className="transition-all duration-200 group-hover:translate-y-[4px] group-focus:translate-y-[4px] group-active:translate-y-[4px] lg:duration-500" />
-				</motion.a>
+					<a
+						href="#tours"
+						className="bg-gray-400/40 group xsm:py-2 flex cursor-pointer items-center gap-3 rounded-2xl border-2 border-transparent px-5 py-1 text-2xl text-white transition-border duration-200 hover:border-white focus:border-white active:border-white lg:duration-500 xl:text-3xl font-mont transform-gpu will-change-[transform,opacity]"
+					>
+						Više informacija{" "}
+						<FaArrowDown className="transition-all duration-200 group-hover:translate-y-1 group-focus:translate-y-1 group-active:translate-y-1 lg:duration-500" />
+					</a>
+				</motion.div>
 			</div>
 		</section>
 	);

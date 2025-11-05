@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
-import { BiSolidStar, BiStar } from "react-icons/bi";
+import { BiSolidStar } from "react-icons/bi";
 import { GiCheckMark } from "react-icons/gi";
+import { motion } from "motion/react";
+import { cardContainer, cardVariants } from "@/lib/animation";
 
 const Recenzije = () => {
 	return (
@@ -8,8 +12,14 @@ const Recenzije = () => {
 			<h2 className="text-4xl font-mont font-bold mb-18">
 				Recenzije naših klijenata:
 			</h2>
-			<div className="grid md:grid-cols-2 grid-cols-1 gap-12">
-				<div className="relative">
+			<motion.div
+				className="grid md:grid-cols-2 grid-cols-1 gap-12"
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true, amount: 0.3 }}
+				variants={cardContainer}
+			>
+				<motion.div className="relative" variants={cardVariants}>
 					<GiCheckMark className="text-7xl z-0 absolute -top-9 -left-4 text-green-700" />
 					<div className="relative flex flex-col gap-6 bg-gray-300/40 border border-gray-500/20 p-8 rounded-4xl shadow-xl z-100">
 						<p className="text-xl font-inter">
@@ -30,8 +40,8 @@ const Recenzije = () => {
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className="relative">
+				</motion.div>
+				<motion.div className="relative" variants={cardVariants}>
 					<GiCheckMark className="text-7xl z-0 absolute -top-9 -left-4 text-green-700" />
 					<div className="relative flex flex-col gap-6 bg-gray-300/40 border border-gray-500/20 p-8 rounded-4xl shadow-xl z-100">
 						<p className="text-xl font-inter">
@@ -52,8 +62,8 @@ const Recenzije = () => {
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className="relative">
+				</motion.div>
+				<motion.div className="relative" variants={cardVariants}>
 					<GiCheckMark className="text-7xl z-0 absolute -top-9 -left-4 text-green-700" />
 					<div className="relative flex flex-col gap-6 bg-gray-300/40 border border-gray-500/20 p-8 rounded-4xl shadow-xl z-100">
 						<p className="text-xl font-inter">
@@ -74,8 +84,8 @@ const Recenzije = () => {
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className="relative">
+				</motion.div>
+				<motion.div className="relative" variants={cardVariants}>
 					<GiCheckMark className="text-7xl z-0 absolute -top-9 -left-4 text-green-700" />
 					<div className="relative flex flex-col gap-6 bg-gray-300/40 border border-gray-500/20 p-8 rounded-4xl shadow-xl z-100">
 						<p className="text-xl font-inter">
@@ -96,8 +106,8 @@ const Recenzije = () => {
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+				</motion.div>
+			</motion.div>
 		</section>
 	);
 };

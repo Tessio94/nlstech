@@ -5,7 +5,7 @@ import { CiMail, CiMobile3 } from "react-icons/ci";
 
 const Header = () => {
 	return (
-		<header className="flex flex-row justify-between items-center px-8 lg:px-12 xl:px-30 py-5 bg-gray-400/30">
+		<header className="flex flex-row justify-between items-center px-8 lg:px-12 xl:px-30 py-5 bg-linear-to-r from-gray-400/30 to-transparent">
 			<Link href="/">
 				<Image
 					className=""
