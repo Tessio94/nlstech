@@ -12,10 +12,19 @@ import {
   articleTitleVariants,
   cardContainer,
 } from "@/lib/animation";
+import { useMediaQuery } from "usehooks-ts";
 
 const MotionImage = motion.create(Image);
 
+const inViewProps = {
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true, amount: 0.3 },
+};
+
 const Articles = () => {
+  const matches = useMediaQuery("(min-width: 1024px)");
+
   return (
     <section className="flex flex-col gap-30 lg:gap-46 xl:gap-52 px-6 sm:px-10 lg:px-18  2xl:px-28 sm:pb-24 xl:pb-30 pt-46 pb-16 bg-gray-400/30">
       <div className="flex flex-col lg:flex-row lg:gap-0 gap-16 justify-between">
@@ -33,7 +42,7 @@ const Articles = () => {
             <MotionImage
               src={laser1}
               alt="Lasersko čišćenje"
-              className="rounded-4xl xl:-mt-10 w-full sm:pr-3 lg:pr-0  sm:w-1/2 lg:w-full xl:w-1/2 h-auto xl:pr-3"
+              className="rounded-4xl xl:-mt-10 w-full sm:pr-3 lg:pr-0  sm:w-1/2 lg:w-full xl:w-1/2 h-auto xl:pr-3 "
               width={450}
               height={680}
               variants={{
@@ -50,8 +59,8 @@ const Articles = () => {
                   transition: { duration: 0.5 },
                 },
               }}
-              // style={{ transformOrigin: "top left" }}
             />
+
             <MotionImage
               src={laser1}
               alt="Lasersko čišćenje"
@@ -77,19 +86,19 @@ const Articles = () => {
         </div>
         <motion.div
           className="xl:mt-10 w-full lg:max-w-[48%]"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={articleContainer}
+          {...(matches ? inViewProps : {})}
+          variants={matches ? articleContainer : undefined}
         >
           <motion.h3
             className="text-4xl font-mont font-bold mb-12"
+            {...(matches ? {} : inViewProps)}
             variants={articleTitleVariants}
           >
             Fokus na tehnologiju i sigurnost
           </motion.h3>
           <motion.p
             className="text-2xl text-inter mb-12"
+            {...(matches ? {} : inViewProps)}
             variants={articleTitleVariants}
           >
             Lasersko čišćenje koristi visoko kontroliranu snagu svjetlosti kako
@@ -98,6 +107,7 @@ const Articles = () => {
           <div className="">
             <motion.p
               className="mb-12 text-3xl font-semibold text-mont"
+              {...(matches ? {} : inViewProps)}
               variants={articleSubtitleVariants}
             >
               Što ga čini sigurnijim od ostalih vrsta čišćenja?
@@ -105,6 +115,7 @@ const Articles = () => {
             <ul className="list-none flex flex-col gap-8">
               <motion.li
                 className="flex flex-row gap-3 text-2xl text-inter"
+                {...(matches ? {} : inViewProps)}
                 variants={articleListVariants}
               >
                 <GiCheckMark className="text-green-600" />
@@ -112,6 +123,7 @@ const Articles = () => {
               </motion.li>
               <motion.li
                 className="flex flex-row gap-3 text-2xl text-inter"
+                {...(matches ? {} : inViewProps)}
                 variants={articleListVariants}
               >
                 <GiCheckMark className="text-green-600" />
@@ -121,6 +133,7 @@ const Articles = () => {
               </motion.li>
               <motion.li
                 className="flex flex-row gap-3 text-2xl text-inter"
+                {...(matches ? {} : inViewProps)}
                 variants={articleListVariants}
               >
                 <GiCheckMark className="text-green-600" />
@@ -133,19 +146,19 @@ const Articles = () => {
       <div className="flex flex-col lg:flex-row lg:gap-0 gap-16 justify-between ">
         <motion.div
           className="xl:mt-10 w-full lg:max-w-[48%] order-2 lg:order-1"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={articleContainer}
+          {...(matches ? inViewProps : {})}
+          variants={matches ? articleContainer : undefined}
         >
           <motion.h3
             className="text-4xl font-mont font-bold mb-12"
+            {...(matches ? {} : inViewProps)}
             variants={articleTitleVariants}
           >
             Fleksibilnost primjene
           </motion.h3>
           <motion.p
             className="text-2xl text-inter mb-12"
+            {...(matches ? {} : inViewProps)}
             variants={articleTitleVariants}
           >
             Zahvaljujući svojoj preciznosti i mogućnosti prilagodbe, lasersko
@@ -156,6 +169,7 @@ const Articles = () => {
           <div className="">
             <motion.p
               className="mb-12 text-3xl font-semibold text-mont"
+              {...(matches ? {} : inViewProps)}
               variants={articleSubtitleVariants}
             >
               Gdje se sve koristi lasersko čišćenje?
@@ -163,6 +177,7 @@ const Articles = () => {
             <ul className="list-none flex flex-col gap-8">
               <motion.li
                 className="flex flex-row gap-3 text-2xl text-inter"
+                {...(matches ? {} : inViewProps)}
                 variants={articleListVariants}
               >
                 <GiCheckMark className="text-green-600" />
@@ -173,6 +188,7 @@ const Articles = () => {
               </motion.li>
               <motion.li
                 className="flex flex-row gap-3 text-2xl text-inter"
+                {...(matches ? {} : inViewProps)}
                 variants={articleListVariants}
               >
                 <GiCheckMark className="text-green-600" />
@@ -182,6 +198,7 @@ const Articles = () => {
               </motion.li>
               <motion.li
                 className="flex flex-row gap-3 text-2xl text-inter"
+                {...(matches ? {} : inViewProps)}
                 variants={articleListVariants}
               >
                 <GiCheckMark className="text-green-600" />

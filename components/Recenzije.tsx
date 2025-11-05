@@ -1,12 +1,20 @@
 "use client";
 
-import React from "react";
-import { BiSolidStar } from "react-icons/bi";
-import { GiCheckMark } from "react-icons/gi";
+import { useMediaQuery } from "usehooks-ts";
 import { motion } from "motion/react";
 import { cardContainer, cardVariants } from "@/lib/animation";
+import { BiSolidStar } from "react-icons/bi";
+import { GiCheckMark } from "react-icons/gi";
+
+const inViewProps = {
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true, amount: 0.3 },
+};
 
 const Recenzije = () => {
+  const matches = useMediaQuery("(min-width: 768px)");
+
   return (
     <section className="px-6 sm:px-10 lg:px-18  2xl:px-28 py-26">
       <h2 className="text-4xl font-mont font-bold mb-18">
@@ -14,12 +22,14 @@ const Recenzije = () => {
       </h2>
       <motion.div
         className="grid md:grid-cols-2 grid-cols-1 gap-12"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={cardContainer}
+        {...(matches ? inViewProps : {})}
+        variants={matches ? cardContainer : undefined}
       >
-        <motion.div className="relative" variants={cardVariants}>
+        <motion.div
+          className="relative"
+          {...(matches ? {} : inViewProps)}
+          variants={cardVariants}
+        >
           <GiCheckMark className="text-7xl z-0 absolute -top-9 -left-4 text-green-700" />
           <div className="relative flex flex-col gap-6 bg-gray-300/40 border border-gray-500/20 p-8 rounded-4xl shadow-xl z-100">
             <p className="text-xl font-inter">
@@ -41,7 +51,11 @@ const Recenzije = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div className="relative" variants={cardVariants}>
+        <motion.div
+          className="relative"
+          {...(matches ? {} : inViewProps)}
+          variants={cardVariants}
+        >
           <GiCheckMark className="text-7xl z-0 absolute -top-9 -left-4 text-green-700" />
           <div className="relative flex flex-col gap-6 bg-gray-300/40 border border-gray-500/20 p-8 rounded-4xl shadow-xl z-100">
             <p className="text-xl font-inter">
@@ -63,7 +77,11 @@ const Recenzije = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div className="relative" variants={cardVariants}>
+        <motion.div
+          className="relative"
+          {...(matches ? {} : inViewProps)}
+          variants={cardVariants}
+        >
           <GiCheckMark className="text-7xl z-0 absolute -top-9 -left-4 text-green-700" />
           <div className="relative flex flex-col gap-6 bg-gray-300/40 border border-gray-500/20 p-8 rounded-4xl shadow-xl z-100">
             <p className="text-xl font-inter">
@@ -85,7 +103,11 @@ const Recenzije = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div className="relative" variants={cardVariants}>
+        <motion.div
+          className="relative"
+          {...(matches ? {} : inViewProps)}
+          variants={cardVariants}
+        >
           <GiCheckMark className="text-7xl z-0 absolute -top-9 -left-4 text-green-700" />
           <div className="relative flex flex-col gap-6 bg-gray-300/40 border border-gray-500/20 p-8 rounded-4xl shadow-xl z-100">
             <p className="text-xl font-inter">
