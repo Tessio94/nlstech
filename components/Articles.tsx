@@ -5,21 +5,21 @@ import Image from "next/image";
 
 const Articles = () => {
 	return (
-		<section className="flex flex-col gap-30 lg:gap-46 xl:gap-52 px-6 sm:px-10 lg:px-18  2xl:px-28 sm:pb-24 xl:pb-30 pt-46 pb-16">
+		<section className="flex flex-col gap-30 lg:gap-46 xl:gap-52 px-6 sm:px-10 lg:px-18  2xl:px-28 sm:pb-24 xl:pb-30 pt-46 pb-16 bg-gray-400/30">
 			<div className="flex flex-col lg:flex-row lg:gap-0 gap-16 justify-between">
 				<div className="w-full lg:max-w-[48%] grow">
-					<div className="max-w-full flex flex-row  gap-6">
+					<div className="max-w-full flex flex-row">
 						<Image
 							src={laser1}
 							alt="Lasersko čišćenje"
-							className="rounded-4xl xl:-mt-10 w-full h-auto"
+							className="rounded-4xl xl:-mt-10 w-full sm:pr-3 lg:pr-0  sm:w-1/2 lg:w-full xl:w-1/2 h-auto xl:pr-3"
 							width={450}
 							height={680}
 						/>
 						<Image
 							src={laser1}
 							alt="Lasersko čišćenje"
-							className="rounded-4xl xl:-mb-10 w-full h-auto xl:block lg:hidden sm:block hidden"
+							className="rounded-4xl xl:-mb-10 w-1/2 h-auto xl:block lg:hidden sm:block hidden pl-3"
 							width={450}
 							height={680}
 						/>
@@ -95,18 +95,18 @@ const Articles = () => {
 					</div>
 				</div>
 				<div className="w-full lg:max-w-[48%] grow lg:order-2 order-1">
-					<div className="max-w-full flex flex-row  gap-6">
+					<div className="max-w-full flex flex-row">
 						<Image
 							src={laser1}
 							alt="Lasersko čišćenje"
-							className="rounded-4xl xl:-mb-10 w-full h-auto"
+							className="rounded-4xl xl:-mb-10 w-full sm:pr-3 lg:pr-0  sm:w-1/2 lg:w-full xl:w-1/2 h-auto xl:pr-3"
 							width={450}
 							height={680}
 						/>
 						<Image
 							src={laser1}
 							alt="Lasersko čišćenje"
-							className="rounded-4xl xl:-mt-10 w-full h-auto xl:block lg:hidden sm:block hidden"
+							className="rounded-4xl xl:-mt-10 w-1/2 h-auto xl:block lg:hidden sm:block hidden pl-3"
 							width={450}
 							height={680}
 						/>

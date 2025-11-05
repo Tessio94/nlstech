@@ -9,8 +9,8 @@ const page = () => {
 	return (
 		<main>
 			<Cover />
-			<Articles />
 			<Pros />
+			<Articles />
 			<Recenzije />
 			<KontaktPoziv />
 		</main>

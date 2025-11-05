@@ -38,7 +38,7 @@ const Header = () => {
 					</li>
 					<li>
 						<Link
-							href="#location"
+							href="/galerija"
 							className="text-black relative cursor-pointer font-mont text-xl font-semibold after:content-[''] after:absolute after:top-full after:left-0 after:right-full hover:after:right-1/2 after:h-0.5 inline-block after:bg-black after:transition-all after:duration-300
 							before:absolute before:top-full before:right-0 before:left-full hover:before:left-1/2 before:h-0.5  before:bg-black before:transition-all before:duration-300"
 						>
@@ -47,7 +47,7 @@ const Header = () => {
 					</li>
 					<li>
 						<Link
-							href="#contact"
+							href="/kontakt"
 							className="text-black relative cursor-pointer font-mont text-xl font-semibold after:content-[''] after:absolute after:top-full after:left-0 after:right-full hover:after:right-1/2 after:h-0.5 inline-block after:bg-black after:transition-all after:duration-300
 							before:absolute before:top-full before:right-0 before:left-full hover:before:left-1/2 before:h-0.5  before:bg-black before:transition-all before:duration-300"
 						>
@@ -59,12 +59,12 @@ const Header = () => {
 
 			<div className="hidden flex-col  lg:flex gap-2">
 				<a
-					href="tel:+095 876 1857"
+					href="tel:+385 99 312 4867"
 					className="text-black flex cursor-pointer items-center gap-1 text-xl font-semibold tracking-wider capitalize xl:gap-[15px]"
 				>
 					<CiMobile3 className="text-black text-2xl ml-[-3px]" />
 					<span className="after:bg-black inline-block relative after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0 font-mont">
-						095 876 1857
+						099 312 4867
 					</span>
 				</a>
 
