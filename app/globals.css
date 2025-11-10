@@ -1,36 +1,52 @@
 @import "tailwindcss";
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
+	--heading1: #2c2c2c;
+	--heading2: #3a2e27;
+	--text1: #4a4a4a;
+	--text2: #555555;
+	--theme1: #cc4e00;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-mont: var(--mont);
-  --font-inter: var(--inter);
-  --shadow-image: 10px 10px 35px;
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-theme1: var(--theme1);
+	--color-heading1: var(--heading1);
+	--color-heading2: var(--heading2);
+	--color-text1: var(--text1);
+	--color-text2: var(--text2);
+
+	--font-mont: var(--mont);
+	--font-inter: var(--inter);
+	--shadow-image: 10px 10px 35px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 main,
 section {
-  max-width: 1920px;
+	max-width: 1920px;
+}
+
+@utility my-text-stroke {
+	-webkit-text-stroke: var(--theme1);
+	-webkit-text-stroke-width: 1px;
 }

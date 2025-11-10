@@ -2,7 +2,7 @@ import React from "react";
 
 const Video = () => {
 	return (
-		<div className="bg-gray-500/80 px-6 sm:px-10 lg:px-18  2xl:px-28 sm:pb-24 xl:pb-30 pt-26 pb-16">
+		<div className="bg-theme1/70 px-6 sm:px-10 lg:px-18  2xl:px-28 sm:pb-24 xl:pb-30 pt-26 pb-16">
 			<h5 className="text-2xl font-mont font-semibold text-white mb-12">
 				Pogledajte online primjere laserskog čišćenja:
 			</h5>
