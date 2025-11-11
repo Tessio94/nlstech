@@ -2,7 +2,10 @@
 
 import React from "react";
 import { GiCheckMark } from "react-icons/gi";
-import laser1 from "@/assets/laser1.jpg";
+import laser1 from "@/assets/nls_machine1.jpg";
+import laser2 from "@/assets/nls_machine2.jpg";
+import laser3 from "@/assets/nls_machine3.jpg";
+import laser4 from "@/assets/nls_machine4.jpg";
 import Image from "next/image";
 import { motion } from "motion/react";
 import {
@@ -13,7 +16,6 @@ import {
 	cardContainer,
 } from "@/lib/animation";
 import { useMediaQuery } from "usehooks-ts";
-import logo from "@/assets/logo/nls-logo.svg";
 
 const MotionImage = motion.create(Image);
 
@@ -64,7 +66,7 @@ const Articles = () => {
 						/>
 
 						<MotionImage
-							src={laser1}
+							src={laser2}
 							alt="Lasersko čišćenje"
 							className="rounded-4xl xl:-mb-10 w-1/2 h-auto xl:block lg:hidden sm:block hidden pl-3"
 							width={450}
@@ -227,7 +229,7 @@ const Articles = () => {
 						}}
 					>
 						<MotionImage
-							src={laser1}
+							src={laser3}
 							alt="Lasersko čišćenje"
 							className="rounded-4xl xl:-mb-10 w-full sm:pr-3 lg:pr-0  sm:w-1/2 lg:w-full xl:w-1/2 h-auto xl:pr-3"
 							width={450}
@@ -248,7 +250,7 @@ const Articles = () => {
 							}}
 						/>
 						<MotionImage
-							src={laser1}
+							src={laser4}
 							alt="Lasersko čišćenje"
 							className="rounded-4xl xl:-mt-10 w-1/2 h-auto xl:block lg:hidden sm:block hidden pl-3"
 							width={450}

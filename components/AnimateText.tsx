@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const AnimateText = ({ text }: { text: string }) => {
 	const letters = text.split("");
-	console.log(letters);
+
 	return (
 		<div className="overflow-hidden inline-block">
 			{letters.map((char, i) => (

@@ -9,7 +9,7 @@ import { AnimateText } from "./AnimateText";
 
 const Cover = () => {
 	return (
-		<section className="lg:bg-none bg-[url('@/assets/laser1.jpg')] bg-no-repeat bg-cover h-screen lg:h-auto">
+		<section className="lg:bg-none bg-[url('/landing-mobile.jpg')] bg-no-repeat bg-cover h-screen lg:h-auto">
 			<Image
 				className="z-0 lg:h-auto lg:object-contain hidden lg:block"
 				src={laser}

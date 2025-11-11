@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ScrollWrapper from "@/components/ScrollWrapper";
 import { ReactNode } from "react";
 
 const Layout = ({ children }: { children: ReactNode }) => {
@@ -8,6 +9,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 			<Header />
 			<>{children}</>
 			<Footer />
+			<ScrollWrapper />
 		</>
 	);
 };
