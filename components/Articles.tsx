@@ -30,7 +30,7 @@ const Articles = () => {
 
 	return (
 		<section className="relative flex flex-col gap-30 lg:gap-46 xl:gap-52 px-6 sm:px-10 lg:px-18  2xl:px-28 sm:pb-24 xl:pb-30 pt-46 pb-16 bg-theme1/10 z-20">
-			<div className="absolute inset-0 bg-[url('@/assets/logo/nls-logo.svg')] max-sm:bg-contain  opacity-5 pointer-events-none z-0" />
+			<div className="absolute inset-0 bg-[url('/nls-logo.svg')] max-sm:bg-contain  opacity-5 pointer-events-none z-0" />
 			<div className="flex flex-col lg:flex-row lg:gap-0 gap-16 justify-between z-20">
 				<div className="w-full lg:max-w-[48%] grow">
 					<motion.div
