@@ -66,7 +66,7 @@ const Kontakt = () => {
 					</div>
 				</div>
 
-				<div className=" bg-theme1/20 p-10 rounded-4xl">
+				<div className=" bg-theme1/20 p-5 sm:p-10 rounded-2xl sm:rounded-4xl">
 					<form
 						className="flex w-full flex-col gap-7"
 						onSubmit={onFormSubmitted}
@@ -154,7 +154,7 @@ const Kontakt = () => {
 					</form>
 				</div>
 			</div>
-			<div className="w-full mt-16">
+			<div className="w-full mt-16 sm:rounded-4xl rounded-2xl overflow-hidden">
 				<iframe
 					title="NLS Tech location"
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91630.3097546177!2d15.166527858103125!3d44.13602363744234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4761fa62d2c0b88f%3A0x12323e1c13f40784!2sZadar!5e0!3m2!1shr!2shr!4v1762330981409!5m2!1shr!2shr"
