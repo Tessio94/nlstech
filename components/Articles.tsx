@@ -151,7 +151,7 @@ const Articles = () => {
 					</div>
 				</motion.div>
 			</div>
-			<div className="flex flex-col lg:flex-row lg:gap-0 gap-16 justify-between ">
+			<div className="flex flex-col lg:flex-row lg:gap-0 gap-16 justify-between z-20">
 				<motion.div
 					className="xl:mt-10 w-full lg:max-w-[48%] order-2 lg:order-1"
 					{...(matches ? inViewProps : {})}
