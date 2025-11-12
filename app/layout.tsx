@@ -75,14 +75,14 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "NLS Tech • Zadar",
+	title: "NLS Tech | Lasersko čišćenje Zadar",
 	description:
-		"Profesionalno lasersko čišćenje tvrdih površina u Zadru – precizno, učinkovito i bez oštećenja materijala. Idealno za kamen, metal, beton i druge površine.",
+		"NLS Tech nudi profesionalno lasersko čišćenje u Zadru – sigurno, učinkovito i bez oštećenja. Vraćamo izvornu čistoću kamena, metala, betona i drugih površina.",
 	icons: {
 		icon: "/nls-logo.svg",
 	},
 	openGraph: {
-		title: "NLS Tech • Zadar",
+		title: "NLS Tech | Lasersko čišćenje Zadar",
 		description:
 			"Profesionalno lasersko čišćenje tvrdih površina u Zadru – precizno, učinkovito i bez oštećenja materijala. Idealno za kamen, metal, beton i druge površine.",
 		url: "https://www.nlstech.pro/",

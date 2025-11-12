@@ -1,5 +1,27 @@
 import React from "react";
 import Video from "@/components/Video";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Galerija | NLS Tech – Lasersko Čišćenje Zadar",
+	description:
+		"Pogledajte galeriju NLS Tech projekata laserskog čišćenja u Zadru. Usporedite rezultate prije i poslije čišćenja kamena, metala i betona.",
+	openGraph: {
+		title: "Galerija | NLS Tech – Lasersko Čišćenje Zadar",
+		description:
+			"Galerija laserskog čišćenja u Zadru – precizno, ekološki i bez oštećenja materijala. NLS Tech projekti i rezultati.",
+		url: "https://www.nlstech.pro/galerija",
+		images: [
+			{
+				url: "https://www.nlstech.pro/landing-desktop.jpg",
+				width: 1920,
+				height: 1080,
+				alt: "Galerija laserskog čišćenja Zadar",
+			},
+		],
+		type: "website",
+	},
+};
 
 const Galerija = () => {
 	return (
