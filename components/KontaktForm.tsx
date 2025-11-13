@@ -12,6 +12,7 @@ import { Toaster, toast } from "sonner";
 
 const KontaktForm = () => {
 	const [success, setSuccess] = useState(false);
+	const [loading, setLoading] = useState(false);
 	const [name, setName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [phone, setPhone] = useState("");
@@ -21,7 +22,7 @@ const KontaktForm = () => {
 	const onFormSubmitted = async (e: React.FormEvent) => {
 		try {
 			e.preventDefault();
-
+			setLoading(true);
 			const res = await fetch("/api/send-email", {
 				method: "POST",
 				cache: "no-cache",
@@ -39,8 +40,11 @@ const KontaktForm = () => {
 			if (!res.ok) {
 				if (res.status === 400) {
 					const data = await res.json();
-					const typeError = data.error.flat().join("<br>");
-					throw new Error(typeError);
+					const stringErr = data.error
+						.flat()
+						.map((err: string) => `• ${err}`)
+						.join("<br>");
+					throw new Error(stringErr);
 				}
 
 				throw new Error("Pogreška prilikom slanja zahtjeva!");
@@ -55,10 +59,12 @@ const KontaktForm = () => {
 			setEmail("");
 			setMessage("");
 			setSuccess(true);
+			setLoading(false);
 			toast.success(result.message);
 		} catch (err) {
 			if (err instanceof Error) {
 				setSuccess(false);
+				setLoading(false);
 				toast.error(<div dangerouslySetInnerHTML={{ __html: err.message }} />);
 			}
 		}
@@ -201,10 +207,33 @@ const KontaktForm = () => {
 								></textarea>
 							</div>
 							<button
-								className="bg-theme1/80 text-white font-bold text-2xl inline-block hover:border-white hover:bg-theme1 active:bg-theme1  focus:bg-theme1  cursor-pointer rounded-xl border-2 border-transparent py-4 px-20 transition-all duration-500 hover:shadow-lg focus:shadow-lg active:shadow-lg w-fit mx-auto"
+								className="bg-theme1/80 text-white font-bold text-2xl  hover:border-white hover:bg-theme1 active:bg-theme1  focus:bg-theme1  cursor-pointer rounded-xl border-2 border-transparent  transition-all duration-500 hover:shadow-lg focus:shadow-lg active:shadow-lg w-fit mx-auto flex flex-row justify-center items-center min-w-[247px] min-h-[68px]"
 								type="submit"
 							>
-								Pošalji
+								{loading ? (
+									<svg
+										className="size-6 animate-spin text-white"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+									>
+										<circle
+											className="opacity-25"
+											cx="12"
+											cy="12"
+											r="10"
+											stroke="currentColor"
+											strokeWidth="4"
+										></circle>
+										<path
+											className="opacity-75"
+											fill="currentColor"
+											d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+										></path>
+									</svg>
+								) : (
+									"Pošalji"
+								)}
 							</button>
 						</form>
 					</div>

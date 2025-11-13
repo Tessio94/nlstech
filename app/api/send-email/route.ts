@@ -8,7 +8,7 @@ const contactSchema = z.object({
 	phone: z
 		.string()
 		.regex(/^\+?[0-9\s-]{7,20}$/, "Pogrešan oblik broja mobitela"),
-	email: z.string().email("Neispravna email adresa"),
+	email: z.email("Neispravna email adresa"),
 	message: z.string().min(5, "Molim pošaljite ispravnu poruku"),
 });
 
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
 
 		const message = {
 			// sets the name of the sender
-			from: `Lito-adventure <${process.env.EMAIL_FROM}>`,
+			from: `NLS Tech <${process.env.EMAIL_FROM}>`,
 			to: process.env.EMAIL_FROM,
 			subject: "Novi upit sa NLSTech stranice",
 			html: `
@@ -47,7 +47,9 @@ export async function POST(request: Request) {
 		};
 
 		const transporter = nodemailer.createTransport({
-			service: "gmail",
+			host: "smtpout.secureserver.net",
+			secure: true,
+			port: 465,
 			auth: {
 				user: process.env.EMAIL_FROM,
 				pass: process.env.PASS,
