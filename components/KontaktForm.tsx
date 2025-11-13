@@ -124,6 +124,13 @@ const KontaktForm = () => {
 							<p className="text-3xl font-mont font-semibold flex flex-row gap-3 items-center text-theme1">
 								<IoLogoInstagram className="text-theme1" /> Instagram
 							</p>
+							<a
+								href="https://www.instagram.com/nlstechzadar/"
+								target="_blank"
+								className="after:bg-theme1 inline-block relative after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0 font-inter text-2xl font-medium"
+							>
+								nlstechzadar
+							</a>
 						</div>
 					</div>
 

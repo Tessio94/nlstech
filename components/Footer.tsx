@@ -50,7 +50,8 @@ const Footer = () => {
 				</p>
 				<div className="flex justify-start">
 					<a
-						href="https://www.instagram.com/nlstechnology/"
+						href="https://www.instagram.com/nlstechzadar/"
+						target="_blank"
 						aria-label="NLS Tech on Instagram - Footer social link"
 						className="group"
 					>
