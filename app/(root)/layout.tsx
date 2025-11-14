@@ -9,6 +9,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
 		"@type": "Organization",
 		name: "NLS Tech",
 		url: "https://nlstech.pro",
+		logo: "https://nlstech.pro/nls-logo.svg",
+		image: "https://nlstech.pro/landing-desktop.jpg",
 	};
 
 	const jsonLdPro = {
@@ -16,6 +18,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
 		"@type": "WebPage",
 		name: "NLS Tech",
 		url: "https://nlstech.pro",
+		logo: "https://nlstech.pro/nls-logo.svg",
+		image: "https://nlstech.pro/landing-desktop.jpg",
 	};
 
 	return (
