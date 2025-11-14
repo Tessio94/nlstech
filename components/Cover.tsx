@@ -11,7 +11,7 @@ const Cover = () => {
 	return (
 		<section className="lg:bg-none bg-[url('/landing-mobile.jpg')] bg-no-repeat bg-cover h-screen lg:h-auto">
 			<Image
-				className="z-0 lg:h-auto lg:object-contain hidden lg:block"
+				className="z-0 cover-image lg:h-auto lg:object-contain hidden lg:block"
 				src={laser}
 				alt="Rad laserskim čistaćem"
 				width={1920}
