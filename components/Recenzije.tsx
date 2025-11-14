@@ -85,9 +85,9 @@ const Recenzije = () => {
 					<GiCheckMark className="text-7xl z-0 absolute -top-9 -left-4 text-green-700" />
 					<div className="relative flex flex-col gap-6 bg-linear-to-tr from-theme1/30 to-theme1/5 border border-theme1/50 p-8 rounded-4xl shadow-xl z-100 shadow-theme1/30">
 						<p className="text-xl font-inter text-text1">
-							Nakon laserskog čišćenja kod NLS Tech-a, rezultat je bio iznad
-							svih očekivanja. Uklonili su nečistoće koje nijedna druga metoda
-							nije mogla. Svaka čast na stručnosti!
+							Usluga je bila izvršena brzo i profesionalno. Površina je
+							temeljito očišćena, a detalji su ponovno došli do izražaja. Zaista
+							vrhunska stručnost i pristup!
 						</p>
 						<div className="flex flex-row justify-between">
 							<div>
