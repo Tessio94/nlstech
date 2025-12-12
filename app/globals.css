@@ -23,8 +23,8 @@ html {
 	--color-text1: var(--text1);
 	--color-text2: var(--text2);
 
-	--font-mont: var(--mont);
-	--font-inter: var(--inter);
+	--font-mont: var(--mont-cover), var(--mont-rest);
+	--font-inter: var(--inter-regular), var(--inter-rest);
 	--shadow-image: 10px 10px 35px;
 }
 
