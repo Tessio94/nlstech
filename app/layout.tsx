@@ -87,6 +87,9 @@ export const metadata: Metadata = {
 	title: "NLS Tech | Lasersko čišćenje Zadar",
 	description:
 		"NLS Tech nudi profesionalno lasersko čišćenje u Zadru – sigurno, učinkovito i bez oštećenja. Vraćamo izvornu čistoću kamena, metala, betona i drugih površina.",
+	icons: {
+		icon: "/icon.png",
+	},
 	openGraph: {
 		title: "NLS Tech | Lasersko čišćenje Zadar",
 		description:
